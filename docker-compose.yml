@@ -1,0 +1,12 @@
+services:
+  audiomass:
+    build: .
+    container_name: audiomass
+    ports:
+      # 5055 taken by jellyseer atm
+      - "5056:5055"
+    restart: unless-stopped
+
+# Usage:
+#   docker compose up --build -d
+# Then open http://localhost:5056
